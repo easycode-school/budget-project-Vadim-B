@@ -1,0 +1,19 @@
+<div class="top">
+
+  <app-balance [balans]="balans"></app-balance>
+
+</div>
+
+<div class="bottom">
+
+  <app-data-input (balansStorage)="EmitStorage($event)" (emitBalans)="balansEmit($event)" [removeItemId]="removeItemId"></app-data-input>
+
+  <div class="container clearfix">
+
+    <app-income-list [income]="storage.income" (emitRemoveItem)="emitRemoveItem($event)"></app-income-list>
+
+    <app-expenses-list [expenses]="storage.expenses" (emitRemoveItem)="emitRemoveItem($event)"></app-expenses-list>
+
+  </div>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="income">
+  <h2 class="icome__title">Income</h2>
+
+  <div class="income__list"  *ngFor="let item of income">
+
+    <div class="item clearfix" id="income-0">
+      <div class="item__description">{{ item.description }}</div>
+      <div class="right clearfix">
+        <div class="item__value">+ {{ item.value }}</div>
+        <div class="item__delete">
+          <button class="item__delete--btn"><i class="ion-ios-close-outline" (click)="removeItem(item.id)"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
