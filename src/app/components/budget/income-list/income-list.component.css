@@ -1,0 +1,12 @@
+.income {
+	float: left;
+	width: 475px;
+	margin-right: 50px;
+}
+
+.icome__title { color: #28B9B5; }
+
+.income .item__value,
+.income .item__delete--btn {
+    color: #28B9B5;
+}

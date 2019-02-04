@@ -1,0 +1,21 @@
+<div class="budget">
+  <div class="budget__title">
+    Available Budget in <span class="budget__title--month">{{ month }}</span>:
+  </div>
+
+  <div class="budget__value">{{ balans.balans }}</div>
+
+  <div class="budget__income clearfix">
+    <div class="budget__income--text">{{ balans.sumIncome }}</div>
+    <div class="right">
+      <div class="budget__income--value"></div>
+    </div>
+  </div>
+
+  <div class="budget__expenses clearfix">
+    <div class="budget__expenses--text">{{ balans.sumExpenses }}</div>
+    <div class="right clearfix">
+      <div class="budget__expenses--value"></div>
+    </div>
+  </div>
+</div>

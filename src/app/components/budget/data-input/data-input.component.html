@@ -1,0 +1,15 @@
+<div class="add">
+  <div class="add__container">
+    <form name="add__balans-form" novalidate (ngSubmit)="addNewItem (addNewItemForm)" #addNewItemForm="ngForm">
+      <!-- если в select выбран 'expense', добавляем инпутам класс 'red-focus'-->
+      <select name="add__select" class="add__type" [(ngModel)]="newInputType" [class.red-focus]="newInputType === 'expense'">
+        <option value="income">+</option>
+        <option value="expense">-</option>
+      </select>
+      <input type="text" name="add__description" class="add__description" placeholder="Add description" [(ngModel)]="newInput.description" name="description" required [class.red-focus]="newInputType === 'expense'">
+      <input type="number" name="add__value" class="add__value" placeholder="Value" [(ngModel)]="newInput.value" name="value" required [class.red-focus]="newInputType === 'expense'">
+      <input type="submit" value="" id="submitAddNewItemForm" class="add__submit">
+      <label for="submitAddNewItemForm" class="add__btn"><i class="ion-ios-checkmark-outline"></i></label>
+    </form>
+  </div>
+</div>

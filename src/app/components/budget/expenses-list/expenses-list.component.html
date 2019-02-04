@@ -1,0 +1,18 @@
+<div class="expenses">
+  <h2 class="expenses__title">Expenses</h2>
+
+  <div class="expenses__list" *ngFor="let item of expenses">
+
+    <div class="item clearfix" id="expense-0">
+      <div class="item__description">{{ item.description }}</div>
+      <div class="right clearfix">
+        <div class="item__value">- {{ item.value }}</div>
+        <!-- <div class="item__percentage">21%</div> -->
+        <div class="item__delete">
+          <button class="item__delete--btn"><i class="ion-ios-close-outline" (click)="removeItem(item.id)"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
